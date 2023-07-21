@@ -3,17 +3,21 @@ import pyautogui
 
 
 obstacle = (83, 83, 83)
+white_obstacle = (255, 255, 255)
+
 time.sleep(3)
 pyautogui.press('Up')
 
 while True:
-    if pyautogui.pixelMatchesColor(350, 650, obstacle) or pyautogui.pixelMatchesColor(300, 640, obstacle):
+    x = 350
+    y = 650
+    w = 600
+    z = 530
+    if pyautogui.pixelMatchesColor(x, y, obstacle):
         pyautogui.press('Up')
-
-    if pyautogui.pixelMatchesColor(350, 600, obstacle) or pyautogui.pixelMatchesColor(300, 600, obstacle):
-        pyautogui.press('Up')
-
-    if pyautogui.pixelMatchesColor(350, 530, obstacle) or pyautogui.pixelMatchesColor(330, 530, obstacle):
+    if pyautogui.pixelMatchesColor(x, w, obstacle) and pyautogui.pixelMatchesColor(x, y, white_obstacle):
+        pyautogui.press('Down')
+    if pyautogui.pixelMatchesColor(x, z, obstacle):
         pyautogui.press('Down')
 
 
