@@ -9,9 +9,9 @@ time.sleep(3)
 pyautogui.press('Up')
 
 while True:
+    w = 600
     x = 350
     y = 650
-    w = 600
     z = 530
     if pyautogui.pixelMatchesColor(x, y, obstacle):
         pyautogui.press('Up')
