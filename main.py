@@ -18,5 +18,5 @@ while True:
     if pyautogui.pixelMatchesColor(x, z, obstacle) and pyautogui.pixelMatchesColor(x, y, space_under_obs):
         pyautogui.press('Down')
 
-
+# # # # # # # ## #  Link for the game  # # # # # # # # #
 # https://elgoog.im/dinosaur-game/
